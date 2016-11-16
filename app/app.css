@@ -1,0 +1,145 @@
+/* app css stylesheet */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Francois+One');
+@import url('https://fonts.googleapis.com/css?family=Francois+One');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+
+h1{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3%;
+  
+}
+
+
+.text{
+   text-align: left; 
+}
+
+.text tr td{
+  width: 50%; 
+
+}
+
+#left_progress{
+  margin-top: 10px;
+  width: 100% ; 
+ 
+
+}
+
+
+.info{
+  text-align: center; 
+  margin-top: 100px ;
+  font-size: 20px ;
+}
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+.col-xs-12,.col-sm-12,.col-md-12,.col-lg-12{margin-bottom: 20px;}
+
+hr 
+{
+  visibility: hidden;
+}
+
+
+.panel-title{
+  margin-bottom: 20px ;
+
+}
+
+.button{
+  font-size: 18px ;
+  background: #0099ff ;
+  color: white ;
+  padding-top: 5px ;
+  padding-bottom: 5px ;
+  padding-left: 5px ;
+   border-radius: 5px;  
+   display:inline-block;
+}
+
+.ng-scope{
+  display: inline-block;
+  margin-top: 10px ;
+  margin-left: 20px ;
+  margin-bottom: 5px;
+}
+
+.Completed{
+  background: red;
+
+}
+
+.panel.panel-primary{
+  height: 500px ;
+  width:  250px ;
+  }
+
+.panel-body{
+   height: 140px ;
+}
+
+
+.label{
+  margin: 0 ;
+}
+
+hr{
+  margin:1px 0 1px 0 ;
+}
+
+.progress-bar-light-orange{
+  background-color: #ffcc99 !important;
+  background-image: -webkit-linear-gradient(top,#ffcc99 0,#c9302c 100%);
+  background-image: -o-linear-gradient(top,#d9534f 0,#c9302c 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(purple),to(white));
+    /* background-image: linear-gradient(to bottom,#d9534f 0,#c9302c 100%); */
+
+}
+
+.progress{
+  width: 50%;
+  margin-top: 10px ;
+  margin-bottom: 0px !important;
+}
+
+.label{
+  display: inline-block !important;
+}

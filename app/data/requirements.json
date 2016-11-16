@@ -1,0 +1,240 @@
+[
+  {
+    "id": 1,
+    "requirement": "Required Courses",
+    "subrequirement": "Calculus Sequence",
+    "hours_needed": 11,
+    "classes_needed": [
+        "MATH 221",
+        "MATH 231",
+        "MATH 241"
+    ],
+  },
+  {
+    "id": 2,
+    "requirement": "Required Courses",
+    "subrequirement": "Differential Equations",
+    "hours_needed": 4,
+    "classes_needed": [
+        "MATH 286",
+    ],
+  },
+  {
+    "id": 3,
+    "requirement": "Required Courses",
+    "subrequirement": "1st Semester Chemistry",
+    "hours_needed": 3,
+    "classes_needed": [
+        "CHEM 102",
+    ],
+  },
+  {
+    "id": 4,
+    "requirement": "Required Courses",
+    "subrequirement": "Rhetoric (Composition I)",
+    "hours_needed": 4,
+    "classes_needed": [
+        "RHET 105",
+    ],
+  },
+  {
+    "id": 5,
+    "requirement": "Required Courses",
+    "subrequirement": "Other Required Courses",
+    "hours_needed": 45,
+    "classes_needed": [
+        "ENG 100",
+        "ECE 110",
+        "ECE 120",
+        "ECE 210",
+        "ECE 374",
+        "ECE 385",
+        "ECE 391",
+        "PHYS 211",
+        "PHYS 212",
+        "PHYS 213",
+        "PHYS 214",
+        "CS 173",
+        "CS 225",
+
+    ],
+  },
+  {
+    "id": 6,
+    "requirement": "Probability/Statistics",
+    "subrequirement": "Probability/Statistics",
+    "hours_needed": 3,
+    "classes_needed": [
+      "ECE 313"
+    ],
+  },
+  {
+    "id": 7,
+    "requirement": "Technical Electives",
+    "subrequirement": "Electrical Engineering Foundations Course",
+    "hours_needed": 3,
+    "classes_needed": [
+      "N/A"
+    ],
+    "classes_possible": [
+      "ECE 310",
+      "ECE 340",
+      "ECE 329",
+      "ECE 486",
+      "ECE 361",
+      "ECE 330"
+    ]
+  },
+  {
+    "id": 8,
+    "requirement": "Technical Electives",
+    "subrequirement": "Advanced Computing Electives",
+    "hours_needed": 9,
+    "classes_needed": [
+      "N/A",
+    ],
+    "classes_possible": [
+      "ECE 462",
+      "CS 411",
+      "CS 418"
+    ]
+  },
+  {
+    "id": ,
+    "requirement": "Technical Electives",
+    "subrequirement": "Design Electives",
+    "hours_needed": 4,
+    "classes_needed": [
+      "N/A",
+    ],
+    "classes_possible": [
+      "ECE 496",
+      "ECE 499",
+      "ECE 445",
+      "ECE 411"
+    ]
+  },
+  {
+    "id": 10,
+    "requirement": "Technical Electives",
+    "subrequirement": "Other Technical Electives",
+    "hours_needed": 10,
+    "classes_needed": [
+      "N/A",
+    ],
+    "classes_possible": [
+      "ECE 402",
+      "ECE 311",
+      "ECE 465",
+      "SHS 200"
+    ]
+  },
+  {
+    "id": 11,
+    "requirement": "Social Sciences and Humanities",
+    "subrequirement": "Campus Humanaties & The Arts",
+    "hours_needed": 6,
+    "classes_needed": [
+      "N/A",
+    ],
+    "classes_possible": [
+      "HIST 171",
+      "HIST 172"
+    ]
+  },
+  {
+    "id": 12,
+    "requirement": "Social Sciences and Humanities",
+    "subrequirement": "Campus Social and Behavioral Science",
+    "hours_needed": 6,
+    "classes_needed": [
+      "N/A",
+    ],
+    "classes_possible": [
+      "ECON 102",
+      "GWS 100"
+    ]
+  },
+  {
+    "id": 13,
+    "requirement": "Social Sciences and Humanities",
+    "subrequirement": "Liberal Education Electives",
+    "hours_needed": 6,
+    "classes_needed": [
+      "N/A",
+    ],
+    "classes_possible": [
+      "ACCY 200",
+      "FIN 221"
+    ]
+  },
+  {
+    "id": 14,
+    "requirement": "Advanced Composition",
+    "subrequirement": "Advanced Composition",
+    "hours_needed": 3,
+    "classes_needed": [
+      "N/A",
+    ],
+    "classes_possible": [
+      "ECE 496",
+      "ECE 499"
+    ]
+  },
+  {
+    "id": 15,
+    "requirement": "Cultural Studies",
+    "subrequirement": "Western/Comparative",
+    "hours_needed": 6,
+    "classes_needed": [
+      "N/A",
+    ],
+    "classes_possible": [
+      "HIST 171",
+      "HIST 172"
+    ]
+  },
+  {
+    "id": 16,
+    "requirement": "Non-Western",
+    "subrequirement": "Non-Western/U.S. Minority",
+    "hours_needed": 3,
+    "classes_needed": [
+      "N/A",
+    ],
+    "classes_possible": [
+      "HIST 171",
+      "HIST 172"
+    ]
+  },
+  {
+    "id": 17,
+    "requirement": "University Foreign Language",
+    "subrequirement": "University Foreign Language",
+    "hours_needed": 4,
+    "classes_needed": [
+      "N/A",
+    ],
+    "classes_possible": [
+      "FR 103"
+    ]
+  },
+  {
+    "id": 18,
+    "requirement": "Other Courses",
+    "subrequirement": "Other Courses",
+    "hours_needed": 7,
+    "classes_needed": [
+      "N/A",
+    ],
+    "classes_possible": [
+      "MUS 181",
+      "MUS 181",
+      "MUS 261",
+      "BADM 199"
+    ]
+  },
+]
+
+
+

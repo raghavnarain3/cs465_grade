@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Graduation Requirment</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-controller="myFirstController" >
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+<div >
+
+<h1 style="color: #111; font-family: 'Open Sans Condensed', sans-serif; font-size: 50px; font-weight: 600; line-height: 64px; margin: 0 0 0; padding: 20px 30px; text-align: center; ">Graduation Requirment</h1>
+<div style="width: 85%; position: absolute; left: 50%; transform: translateX(-50%);">
+<table class="table table-inverse info">
+  <tbody class="text">
+    <tr >
+      <td>Ryan Ding</td>
+      <td>GPA<span style="width:50%;float:right;">4.0/4.0</span></td>
+    </tr>
+    <tr>
+      <td>rgd0211</td>
+      <td>Technical GPA<span style="width:50%;float:right;">4.0/4.0</span></td>
+    </tr>
+    <tr>
+      <td>61820000</td>
+      <td>Graducation date<span style="width:50%;float:right;">Class of 2018</span></td>
+    </tr>
+    <tr>
+      <td><div id="left_progress" class="progress">
+      <div class="progress-bar progress-bar-success" role="progressbar" style="width:{{completed()*100/128}}%;f">
+        Completed
+      </div>
+      <div class="progress-bar progress-bar-warning" role="progressbar" style="width:{{inProgress()*100/128}}%;f">
+      In Progress
+      </div>
+      <div class="progress-bar progress-bar-danger" role="progressbar" style="width:{{registered()*100/128}}%;f">
+      Registered
+      </div>
+      <div ng-show="whatifclass.length" class="ng-hide" class="progress-bar progress-bar-info" role="progressbar" style="width:{{whatifclass*100/128}}%;f">
+      What if 
+      </div>
+      </div>
+      </td > 
+      <td >Hours Completed<span style="width:50%;float:right;">{{completed()+inProgress()+registered()}}/128</span></td>
+  </tbody>
+</table>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="pull-right"> <a id="expandAll" href="#" class="btn btn-default" role="button">Expand All</a>
+
+                <a id="collapseAll" href="#" class="btn btn-default" role="button">Collapse All</a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                          Required Classes
+                        </a>
+                          <div class="progress" >
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:{{filtered1.length*100/20}}%">
+                              Completed 
+                            </div>
+                            <div class="progress-bar progress-bar-warning" role="progressbar" style="width:{{filtered2.length*100/20}}%">
+                              In progress
+                            </div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:{{filtered3.length*100/20}}%">
+                              Registered
+                            </div>
+                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:{{noFilter1.length*100/20}}%">
+                                What-If
+                              </div>
+                        </div>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                      <div class="container-fluid">
+                          <div class="row">
+
+                  
+                          <div style="margin: 0% ; margin-top: 2%; "  class="col-lg-3"   ng-repeat="class in filtered1 = (classes | filter:'Required' | filter:'Completed')">
+                                <div class="panel panel-default" style="background:#a2dda7
+; font-size: 15px; border: 4px solid ; border-color:#5cb85c ;"  >
+                                  <div class="panel-heading">
+                                      <h6  class="panel-title" style="font-size: 13px;">
+                                      <p style="font-size: 18px" ="">{{class.course_number}}</p> {{class.course_name}}</h6>
+                                  </div>
+                                  <div class="panel-body">
+                                    <span class="label label-default" ng-repeat="req in class.requirement">{{req}}</span>
+                                    <span class="label label-default" ng-repeat="subreq in class.subrequirement">{{subreq}}</span>
+                                     
+                                     <p style="position: absolute; font-size: 18px; top:7%; right: 12%;">{{class.grade}}</p>
+                          
+                                      <p style="margin-top: 10%;" >{{class.semester}} <span style="float: right;">{{class.hours}} hours</span><p>         
+                              
+                                  </div>
+                                </div>
+                            </div>
+              
+                            <!--In progress Course >  <-->    
+                          <div  style="margin: 0% ; margin-top: 2%; "  class="col-lg-3" ng-repeat="class in filtered2 = (classes | filter:'Required' | filter:'In-Progress')">
+                                <div class="panel panel-default" style="background:#ffcc99; font-size: 15px; border: 4px solid orange ; border-radius: 2px;">
+                                  <div class="panel-heading">
+                                      <h6 class="panel-title" style="font-size: 13px;"><p style="font-size: 18px" ="">{{class.course_number}}</p> {{class.course_name}}</h6>
+                                  </div>
+                                  <div class="panel-body">
+                                    <span class="label label-default" ng-repeat="req in class.requirement">{{req}}</span>
+                                    <span class="label label-default" ng-repeat="subreq in class.subrequirement">{{subreq}}</span>
+
+                                     <p style="position: absolute; font-size: 18px; top:7%; right: 12%;">{{class.grade}}</p>
+                                      
+                                          <p style="margin-top: 10%;" >{{class.semester}} <span style="float: right;">{{class.hours}} hours</span><p>         
+                                  
+                                  </div>
+                                </div>
+                            </div>
+                             <!--In progress Course >  <-->  
+
+                           <!--Registered Course >  <-->   
+                          <div style="margin: 0% ; margin-top: 2%; margin-bottom: 1%;  "  class="col-lg-3" ng-repeat="class in filtered3 = (classes | filter:'Required' | filter:'Registered')">
+                                <div class="panel panel-default" style="background: #ffb3b3;font-size: 15px; border: 4px solid  red">
+                                  <div class="panel-heading">
+                                      <h6 class="panel-title" style="font-size: 13px;">      <p style="font-size: 18px" ="">{{class.course_number}}</p>  {{class.course_name}}</h6>
+                                  </div>
+                                  <div class="panel-body">
+                                    <span style="float:left;" class="label label-default" ng-repeat="req in class.requirement">{{req}}</span>
+                                    <span class="label label-default" ng-repeat="subreq in class.subrequirement">{{subreq}}</span>
+
+                                     <p style="position: absolute; font-size: 18px; top:7%; right: 12%;">{{class.grade}}</p>
+                                      
+                                    <p style="position: relative; font-size: 15px; top:8%; left:  2%;"" >{{class.semester}}</p>
+                          
+                                      <p style="position: relative; font-size: 15px; top:-43%; left: 75%; margin-top: 0 " >
+                                  </div>
+                                </div>
+                                </div>
+
+                                <div style="margin: 0% ; margin-top: 2%; margin-bottom: 1%;  " class="col-lg-3" ng-repeat="class in noFilter1">
+                                <div class="panel panel-default" style="border: solid 4px black ;  float:  left; ">
+                                  <div class="panel-heading">
+                                      <h3 class="panel-title" style="font-size: 13px;"> <p style="font-size: 18px" ="">{{class.course_number}}</p>  {{class.course_name}}</h3></h3>
+                                  </div>
+                                  <div class="panel-body">
+                                    <span class="label label-default" ng-repeat="req in class.requirement">{{req}}</span>
+                                    <span class="label label-default" ng-repeat="subreq in class.subrequirement">{{subreq}}</span>
+                               <!--Registered Course >  <-->        
+                    
+                                     <p style="position: absolute; font-size: 18px; top:7%; right: 12%;">{{class.grade}}</p>
+                                      
+                                          <p style="margin-top: 10%;" >{{class.semester}} <span style="float: right;">{{class.hours}} hours</span><p>         
+                                  
+                                  </div>
+                                </div>
+
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                          Technical Electives
+                        </a>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:{{filtered4.length*100/9}}%">
+                              Required Classes
+                            </div>
+                            <div class="progress-bar progress-bar-warning" role="progressbar" style="width:{{filtered6.length*100/9}}%">
+                              In Progress
+                            </div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:{{filtered5.length*100/9}}%">
+                              Registered
+                            </div>
+                            <div class="progress-bar progress-bar-info" ng-show="noFilter2.length" class="ng-hide" role="progressbar" style="width:{{noFilter2.length*100/9}}%">
+                                What-If
+                              </div>
+                          </div>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                      <div class="container-fluid">
+                          <div class="row">
+                          <div style="margin: 0% ; margin-top: 2%; margin-bottom: 1%; " class="col-lg-3" ng-repeat="class in filtered4 = (classes | filter:'Technical Electives' | filter:'Completed')">
+                                <div class="panel panel-default" style="background:#3ff600; font-size: 15px; border: 4px solid #5cb85c>
+                                  <div class="panel-heading">
+                                      <h3 class="panel-title" style="font-size: 13px;"> <p style="font-size: 18px" ="">{{class.course_number}}</p>  {{class.course_name}}</h3></h3>
+                                  </div>
+                                  <div class="panel-body">
+                                    <span class="label label-default" ng-repeat="req in class.requirement">{{req}}</span>
+                                    <span class="label label-default" ng-repeat="subreq in class.subrequirement">{{subreq}}</span>
+                             
+                                     <p style="position: absolute; font-size: 18px; top:7%; right: 12%;">{{class.grade}}</p>
+                                      
+                                          <p style="margin-top: 10%;" >{{class.semester}} <span style="float: right;">{{class.hours}} hours</span><p>         
+                                  
+                                  </div>
+                                </div>
+                            </div>
+
+
+                          <div style="margin: 0% ; margin-top: 2%; margin-bottom: 1%;  " class="col-lg-3" ng-repeat="class in filtered6 = (classes | filter:'Technical Electives' | filter:'In-Progress')">
+                                <div class="panel panel-default" style="background:#ffcc99; font-size: 15px; border: 4px solid orange ; border-radius: 2px;">
+                                  <div class="panel-heading">
+                                      <h3 class="panel-title" style="font-size: 13px;"> <p style="font-size: 18px" ="">{{class.course_number}}</p>  {{class.course_name}}</h3></h3>
+                                  </div>
+                                  <div class="panel-body">
+                                    <span class="label label-default" ng-repeat="req in class.requirement">{{req}}</span>
+                                    <span class="label label-default" ng-repeat="subreq in class.subrequirement">{{subreq}}</span>
+
+                                     <p style="position: absolute; font-size: 18px; top:7%; right: 12%;">{{class.grade}}</p>
+                                      
+                                          <p style="margin-top: 10%;" >{{class.semester}} <span style="float: right;">{{class.hours}} hours</span><p>         
+                                  
+                                  </div>
+                                </div>
+                                </div>
+
+                          <div style="margin: 0% ; margin-top: 2%; margin-bottom: 1%;  " class="col-lg-3" ng-repeat="class in filtered5 = (classes | filter:'Technical Electives' | filter:'Registered')">
+                                <div class="panel panel-default" style="background: #ffb3b3;font-size: 15px; border: 4px solid  red">
+                                  <div class="panel-heading">
+                                      <h3 class="panel-title" style="font-size: 13px;"> <p style="font-size: 18px" ="">{{class.course_number}}</p>  {{class.course_name}}</h3></h3>
+                                  </div>
+                                  <div class="panel-body">
+                                    <span class="label label-default" ng-repeat="req in class.requirement">{{req}}</span>
+                                    <span class="label label-default" ng-repeat="subreq in class.subrequirement">{{subreq}}</span>
+
+                                     <p style="position: absolute; font-size: 18px; top:7%; right: 12%;">{{class.grade}}</p>
+                                      
+                                          <p style="margin-top: 10%;" >{{class.semester}} <span style="float: right;">{{class.hours}} hours</span><p>         
+                                  
+                                  </div>
+                                </div>
+                            </div>
+                          
+
+                                <div style="margin: 0% ; margin-top: 2%; margin-bottom: 1%;  " class="col-lg-3" ng-repeat="class in noFilter2">
+                                <div class="panel panel-default" style="border: solid 4px black ;  float:  left;">
+                                  <div class="panel-heading">
+                                      <h3 class="panel-title" style="font-size: 13px;"> <p style="font-size: 18px" ="">{{class.course_number}}</p>  {{class.course_name}}</h3></h3>
+                                      <i  class="fa fa-trash-o" style="cursor:pointer;position: absolute; top:4%; right: 8%; font-size:25px;" ng-click="addBack(class)"></i>
+                                  </div>
+                                  <div class="panel-body">
+                                    <span class="label label-default" ng-repeat="req in class.requirement">{{req}}</span>
+                                    <span class="label label-default" ng-repeat="subreq in class.subrequirement">{{subreq}}</span>
+
+                                  
+                                      
+                                          <p style="margin-top: 10%;" >{{class.semester}} <span style="float: right;">{{class.hours}} hours</span><p>         
+                                  
+                                  </div>
+                                </div>
+
+                            </div>
+
+                          
+    <!--<div  style="width: 100%; display:inline-block;" class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">You are done with Electrical Engineering Foundations Course</div>
+      <div  ng-repeat="class in suggestion1 = (classes | filter:'What-If' | filter:'Technical Electives' | filter:'Electrical Engineering Foundations Course')">
+      
+      <button  ng-click="add(class)" type="button" class="button">{{class.course_number}} <i style="font-size: 12px;"class="fa fa-plus" aria-hidden="true"></i></button>
+</div>
+      </div>
+      </div>-->
+      
+      <div  style="width: 100%; display:inline-block;" class="panel-group" ng-hide="checked1">
+      <div class="panel panel-default">
+      <div class="panel-heading">You need {{techE1}} class(s) for Advanced Computing Elective</div>
+      <div  ng-repeat="class in suggestion2 = (classes | filter:'What-If' | filter:'Technical Electives' | filter:'Advanced Computing Elective')">
+      
+      <button  ng-click="add(class)" type="button" class="button">{{class.course_number}} <i style="font-size: 12px;"class="fa fa-plus" aria-hidden="true"></i></button>
+</div>
+      <button style="float:right;" ng-click="setModalText(suggestion2)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i style="font-size: 20px;"class="fa fa-plus" aria-hidden="true"></i></button>
+      </div>
+      </div>
+
+      <div  style="width: 100%; display:inline-block;" class="panel-group" ng-hide="checked2">
+      <div class="panel panel-default">
+      <div class="panel-heading">You need {{techE2}} class(s) for Design Electives</div>
+      <div  ng-repeat="class in suggestion3 = (classes | filter:'What-If' | filter:'Technical Electives' | filter:'Design Electives')">
+      
+      <button  ng-click="add(class)" type="button" class="button">{{class.course_number}} <i style="font-size: 12px;"class="fa fa-plus" aria-hidden="true"></i></button>
+</div>
+<button style="float:right;" ng-click="setModalText(suggestion3)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i style="font-size: 20px;"class="fa fa-plus" aria-hidden="true"></i></button>
+      </div>
+    </div>
+
+    <div  style="width: 100%; display:inline-block;" class="panel-group" ng-hide="checked3">
+      <div class="panel panel-default">
+      <div class="panel-heading">Other Technical Electives</div>
+      <div  ng-repeat="class in suggestion4 = (classes | filter:'What-If' | filter:'Other Technical Electives')">
+      
+      <button  ng-click="add(class)" type="button" class="button">{{class.course_number}} <i style="font-size: 12px;"class="fa fa-plus" aria-hidden="true"></i></button>
+</div>
+<button style="float:right;" ng-click="setModalText(suggestion4)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i style="font-size: 20px;"class="fa fa-plus" aria-hidden="true"></i></button>
+      </div>
+    </div>
+
+
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            Social Sciences and Humanities
+                          </a>
+                            <div class="progress">
+                              <div class="progress-bar progress-bar-success" role="progressbar" style="width:{{filtered7.length*100/7}}%">
+                                Completed
+                              </div>
+                              <div class="progress-bar progress-bar-warning" role="progressbar" style="width:{{filtered9.length*100/7}}%">
+                                In Progress
+                              </div>
+                              <div ng-show="filtered8.length" class="ng-hide" class="progress-bar progress-bar-danger" role="progressbar" style="width:{{filtered8.length*100/7}}%">
+                                Registered
+                              </div>
+                               <div ng-show="flag"  class="progress-bar progress-bar-info" role="progressbar" style="width:{{noFilter3.length*100/7}}%">
+                                What-If 
+                              </div>
+                          </div>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                      <div class="container-fluid">
+                          <div class="row">
+                          <div style="margin: 0% ; margin-top: 2%; margin-bottom: 1%;  " class="col-lg-3" ng-repeat="class in filtered7 = (classes | filter:'Social Sciences and Humanities' | filter:'Completed')">
+                                <div class="panel panel-default" style="background:#a2dda7
+; font-size: 15px; border: 4px solid ; border-color:#5cb85c ;">
+                                  <div class="panel-heading">
+                                      <h3 class="panel-title" style="font-size: 13px;"> <p style="font-size: 18px" ="">{{class.course_number}}</p>  {{class.course_name}}</h3></h3>
+                                  </div>
+                                  <div class="panel-body">
+                                    <span class="label label-default" ng-repeat="req in class.requirement">{{req}}</span>
+                                    <span class="label label-default" ng-repeat="subreq in class.subrequirement">{{subreq}}</span>
+                                    
+                                     <p style="position: absolute; font-size: 18px; top:7%; right: 12%;">{{class.grade}}</p>
+                                      
+                                          <p style="margin-top: 10%;" >{{class.semester}} <span style="float: right;">{{class.hours}} hours</span><p>         
+                                  
+                                  </div>
+                                </div>
+                            </div>
+
+                          <div style="margin: 0% ; margin-top: 2%; margin-bottom: 1%;  " class="col-lg-3" ng-repeat="class in filtered8 = (classes | filter:'Social Sciences and Humanities' | filter:'Registered')">
+                                <div class="panel panel-default" style="background: #ffb3b3;font-size: 15px; border: 4px solid  red">
+                                  <div class="panel-heading">
+                                      <h3 class="panel-title" style="font-size: 13px;"> <p style="font-size: 18px" ="">{{class.course_number}}</p>  {{class.course_name}}</h3></h3>
+                                  </div>
+                                  <div class="panel-body">
+                                    <span class="label label-default" ng-repeat="req in class.requirement">{{req}}</span>
+                                    <span class="label label-default" ng-repeat="subreq in class.subrequirement">{{subreq}}</span>
+
+                                     <p style="position: absolute; font-size: 18px; top:7%; right: 12%;">{{class.grade}}</p>
+                                      
+                                          <p style="margin-top: 10%;" >{{class.semester}} <span style="float: right;">{{class.hours}} hours</span><p>         
+                                  
+                                  </div>
+                                </div>
+                            </div>
+                          <div style="margin: 0% ; margin-top: 2%; margin-bottom: 1%;  " class="col-lg-3" ng-repeat="class in filtered9 = (classes | filter:'Social Sciences and Humanities' | filter:'In-Progress')">
+                                <div class="panel panel-default" style="background:#ffcc99; font-size: 15px; border: 4px solid orange ; border-radius: 2px;">
+                                  <div class="panel-heading">
+                                      <h3 class="panel-title" style="font-size: 13px;"> <p style="font-size: 18px" >{{class.course_number}}</p>  {{class.course_name}}</h3></h3>
+                                  </div>
+                                  <div class="panel-body">
+                                    <span class="label label-default" ng-repeat="req in class.requirement">{{req}}</span>
+                                    <span class="label label-default" ng-repeat="subreq in class.subrequirement">{{subreq}}</span>
+
+                                     <p style="position: absolute; font-size: 18px; top:7%; right: 12%;">{{class.grade}}</p>
+                                      
+                                          <p style="margin-top: 10%;" >{{class.semester}} <span style="float: right;">{{class.hours}} hours</span><p>         
+                                  
+                                  </div>
+                                </div>
+                                </div>
+
+                                <div style="margin: 0% ; margin-top: 2%; margin-bottom: 1% ;" class="col-lg-3" ng-repeat="class in noFilter3">
+                                <div class="panel panel-default" style="border: solid 4px black ;  float:  left;">
+                                  <div class="panel-heading" >
+                                      <h3 class="panel-title" style="font-size: 13px;"> <p style="font-size: 18px" ="">{{class.course_number}}</p>  {{class.course_name}}</h3></h3>
+                                      <i class="fa fa-trash-o"  style="cursor: pointer; position: absolute; top:4%; right: 8%; font-size:25px;" ng-click="addBack(class)"></i>
+                                  </div>
+                                  <div class="panel-body">
+                                    <span class="label label-default" ng-repeat="req in class.requirement">{{req}}</span>
+                                    <span class="label label-default" ng-repeat="subreq in class.subrequirement">{{subreq}}</span>
+                                      
+                                          <p style="margin-top: 10%;" >{{class.semester}} <span style="float: right;">{{class.hours}} hours</span><p>         
+                                  
+                                  </div>
+                                </div>
+
+                            </div>
+
+
+
+    <div  style="width: 100%; display:inline-block;" class="panel-group" ng-hide="checked4">
+    <div class="panel panel-default">
+      <div class="panel-heading">You need {{socE1}} class(s) for Campus Social and Behavioral Science</div>
+      <div  ng-repeat="class in suggestion5 = (classes | filter:'What-If' | filter:'Social Sciences and Humanities' | filter:'Campus Social and Behavioral Science')">
+      
+      <button  ng-click="add(class)" type="button" class="button">{{class.course_number}} <i style="font-size: 12px;"class="fa fa-plus" aria-hidden="true"></i></button>
+</div>
+<button style="float:right;" ng-click="setModalText(suggestion5)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i style="font-size: 20px;"class="fa fa-plus" aria-hidden="true"></i></button>
+      </div>
+      </div>
+      
+      <div  style="width: 100%; display:inline-block;" class="panel-group" ng-hide="checked5">
+      <div class="panel panel-default">
+      <div class="panel-heading">You need {{socE2}} class(s) for Campus Humanaties The Arts</div>
+      <div  ng-repeat="class in suggestion6 = (classes | filter:'What-If' | filter:'Social Sciences and Humanities' | filter:'Campus Humanaties The Arts')">
+      
+      <button  ng-click="add(class)" type="button" class="button">{{class.course_number}} <i style="font-size: 12px;"class="fa fa-plus" aria-hidden="true"></i></button>
+</div>
+<button style="float:right;" ng-click="setModalText(suggestion6)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i style="font-size: 20px;"class="fa fa-plus" aria-hidden="true"></i></button>
+      </div>
+      </div>
+
+     <!-- <div  style="width: 100%;" class="panel-group">
+      <div class="panel panel-default">
+      <div class="panel-heading">You are done with Non-Western/U.S. Minority</div>
+      <div  ng-repeat="class in suggestion6 = (classes | filter:'What-If' | filter:'Social Sciences and Humanities' | filter:'Non-Western/U.S. Minority')">
+      
+      <button  ng-click="add(class)" type="button" class="button">{{class.course_number}} <i style="font-size: 12px;"class="fa fa-plus" aria-hidden="true"></i></button>
+</div>
+      </div>
+    </div>-->
+
+    <div  style="width: 100%; display:inline-block;" class="panel-group" ng-hide="checked6">
+      <div class="panel panel-default">
+      <div class="panel-heading">You need {{socE3}} class(s) for Western/Comparative</div>
+      <div  ng-repeat="class in suggestion7 = (classes | filter:'What-If' | filter:'Western/Comparative')">
+      
+      <button  ng-click="add(class)" type="button" class="button">{{class.course_number}} <i style="font-size: 12px;"class="fa fa-plus" aria-hidden="true"></i></button>
+</div>
+<button style="float:right;" ng-click="setModalText(suggestion7)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i style="font-size: 20px;"class="fa fa-plus" aria-hidden="true"></i></button>
+      </div>
+    </div>
+
+    <div  style="width: 100%; display:inline-block;" class="panel-group" ng-hide="checked7">
+      <div class="panel panel-default">
+      <div class="panel-heading">Other liberal education electives</div>
+      <div  ng-repeat="class in suggestion8 = (classes | filter:'What-If' | filter:'Liberal Education Electives')">
+      
+      <button  ng-click="add(class)" type="button" class="button">{{class.course_number}} <i style="font-size: 12px;"class="fa fa-plus" aria-hidden="true"></i></button>
+</div>
+<button style="float:right;" ng-click="setModalText(suggestion8)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i style="font-size: 20px;"class="fa fa-plus" aria-hidden="true"></i></button>
+      </div>
+    </div>
+
+
+
+                          </div>
+                      </div>
+                    </div>
+                </div>
+
+                <!--<div  style="width: 100%; display:inline-block;" class="panel-group">
+      <div class="panel panel-default">
+      <div class="panel-heading">Choose One For Me</div>
+    
+      
+      <button ng-click="setModalText(suggestion2)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i style="font-size: 20px;"class="fa fa-plus" aria-hidden="true"></i></button>
+      </div>
+    </div>-->
+
+          <div  ng-repeat="class in allwhatif = (classes | filter:'What-If')"> </div>
+
+
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Choose for me</h4>
+      </div>
+      <div class="modal-body">
+        Would you like to add <b>{{thisClass.course_number}}</b>?
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button data-dismiss="modal" ng-click="chooseone()" type="button" class="btn btn-primary">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+
+
+
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <!-- Latest compiled and minified CSS -->
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+
+</body>
+</html>

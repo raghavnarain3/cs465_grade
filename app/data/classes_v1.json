@@ -1,0 +1,700 @@
+[
+  {
+    "id": 1,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Calculus Sequence"
+    ],
+    "course_number": "MATH 221",
+    "course_name": "Calculus I",
+    "hours": 4,
+    "semester": "Fall 2014",
+    "grade": "A+",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 2,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Calculus Sequence"
+    ],
+    "course_number": "MATH 231",
+    "course_name": "Calculus II",
+    "hours": 3,
+    "semester": "Spring 2015",
+    "grade": "A+",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 3,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Calculus Sequence"
+    ],
+    "course_number": "MATH 241",
+    "course_name": "Calculus III",
+    "hours": 4,
+    "semester": "Fall 2015",
+    "grade": "A-",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 4,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Differential Equations"
+    ],
+    "course_number": "MATH 286",
+    "course_name": "Intro to Differential Eq Plus",
+    "hours": 4,
+    "semester": "Spring 2016",
+    "grade": "A",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 5,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "1st Semester Chemistry"
+    ],
+    "course_number": "CHEM 102",
+    "course_name": "General Chemistry I",
+    "hours": 3,
+    "semester": "Spring 2015",
+    "grade": "B",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 6,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Rhetoric (Composition I)"
+    ],
+    "course_number": "RHET 105",
+    "course_name": "Writing and Research",
+    "hours": 4,
+    "semester": "Fall 2014",
+    "grade": "A",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 7,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Other Required Courses"
+    ],
+    "course_number": "ENG 100",
+    "course_name": "Engineering Orientation",
+    "hours": 0,
+    "semester": "Fall 2014",
+    "grade": "A",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 8,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Other Required Courses"
+    ],
+    "course_number": "ECE 110",
+    "course_name": "Introduction to Electronics",
+    "hours": 3,
+    "semester": "Spring 2015",
+    "grade": "A-",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 9,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Other Required Courses"
+    ],
+    "course_number": "ECE 120",
+    "course_name": "Introduction to Computing",
+    "hours": 4,
+    "semester": "Fall 2014",
+    "grade": "C+",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 10,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Other Required Courses"
+    ],
+    "course_number": "ECE 210",
+    "course_name": "Analog Signal Processing",
+    "hours": 4,
+    "semester": "Spring 2016",
+    "grade": "B",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 11,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Other Required Courses"
+    ],
+    "course_number": "ECE 220",
+    "course_name": "Computer Systems & Programming",
+    "hours": 4,
+    "semester": "Fall 2015",
+    "grade": "C",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 12,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Other Required Courses"
+    ],
+    "course_number": "ECE 374",
+    "course_name": "Intro to Algorithms",
+    "hours": 4,
+    "semester": "Spring 2017",
+    "grade": "N/A",
+    "taken": false,
+    "status": "Registered"
+  },
+  {
+    "id": 13,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Other Required Courses"
+    ],
+    "course_number": "ECE 385",
+    "course_name": "Digital Systems Laboratory",
+    "hours": 3,
+    "semester": "Fall 2016",
+    "grade": "N/A",
+    "taken": false,
+    "status": "In-Progress"
+  },
+  {
+    "id": 14,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Other Required Courses"
+    ],
+    "course_number": "ECE 391",
+    "course_name": "Computer Systems Engineering",
+    "hours": 4,
+    "semester": "Spring 2017",
+    "grade": "N/A",
+    "taken": false,
+    "status": "Registered"
+  },
+  {
+    "id": 15,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Other Required Courses"
+    ],
+    "course_number": "PHYS 211",
+    "course_name": "University Physics: Mechanics",
+    "hours": 4,
+    "semester": "Spring 2015",
+    "grade": "A",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 16,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Other Required Courses"
+    ],
+    "course_number": "PHYS 212",
+    "course_name": "University Physics: Elec & Mag",
+    "hours": 4,
+    "semester": "Fall 2015",
+    "grade": "A",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 17,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Other Required Courses"
+    ],
+    "course_number": "PHYS 213",
+    "course_name": "University Physics: Thermal Physics",
+    "hours": 2,
+    "semester": "Fall 2016",
+    "grade": "N/A",
+    "taken": false,
+    "status": "In-Progress"
+  },
+  {
+    "id": 18,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Other Required Courses"
+    ],
+    "course_number": "PHYS 214",
+    "course_name": "University Physics: Quantum Physics",
+    "hours": 2,
+    "semester": "Fall 2016",
+    "grade": "N/A",
+    "taken": false,
+    "status": "In-Progress"
+  },
+  {
+    "id": 19,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Other Required Courses"
+    ],
+    "course_number": "CS 173",
+    "course_name": "Discrete Structures",
+    "hours": 3,
+    "semester": "Spring 2016",
+    "grade": "A",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 20,
+    "requirement": [
+      "Required Courses"
+    ],
+    "subrequirement": [
+      "Other Required Courses"
+    ],
+    "course_number": "CS 225",
+    "course_name": "Data Structures",
+    "hours": 4,
+    "semester": "Spring 2016",
+    "grade": "A-",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 21,
+    "requirement": [
+      "Probability/Statistics"
+    ],
+    "subrequirement": [
+      "Probability/Statistics"
+    ],
+    "course_number": "ECE 313",
+    "course_name": "Probability with Engrg Applic",
+    "hours": 3,
+    "semester": "Fall 2016",
+    "grade": "N/A",
+    "taken": false,
+    "status": "In-Progress"
+  },
+  {
+    "id": 22,
+    "requirement": [
+      "Technical Electives"
+    ],
+    "subrequirement": [
+      "Electrical Engineering Foundations Course"
+    ],
+    "course_number": "ECE 310",
+    "course_name": "Digital Signal Processing",
+    "hours": 3,
+    "semester": "Spring 2017",
+    "grade": "N/A",
+    "taken": false,
+    "status": "Registered"
+  },
+  {
+    "id": 41,
+    "requirement": [
+      "Technical Electives"
+    ],
+    "subrequirement": [
+      "Advanced Computing Elective"
+    ],
+    "course_number": "ECE 462",
+    "course_name": "Logic Synthesis",
+    "hours": 3,
+    "semester": "Fall 2017",
+    "grade": "N/A",
+    "taken": false,
+    "status": "What-If"
+  },
+  {
+    "id": 23,
+    "requirement": [
+      "Technical Electives"
+    ],
+    "subrequirement": [
+      "Advanced Computing Elective"
+    ],
+    "course_number": "CS 411",
+    "course_name": "Database Systems",
+    "hours": 3,
+    "semester": "Fall 2016",
+    "grade": "N/A",
+    "taken": false,
+    "status": "In-Progress"
+  },
+  {
+    "id": 24,
+    "requirement": [
+      "Technical Electives"
+    ],
+    "subrequirement": [
+      "Advanced Computing Elective"
+    ],
+    "course_number": "CS 418",
+    "course_name": "Interactive Computer Graphics",
+    "hours": 4,
+    "semester": "Fall 2017",
+    "grade": "N/A",
+    "taken": false,
+    "status": "What-If"
+  },
+  {
+    "id": 25,
+    "requirement": [
+      "Technical Electives",
+      "Advanced Composition"
+    ],
+    "subrequirement": [
+      "Design Electives",
+      "Advanced Composition"
+    ],
+    "course_number": "ECE 496",
+    "course_name": "Senior Research Project",
+    "hours": 2,
+    "semester": "Fall 2017",
+    "grade": "N/A",
+    "taken": false,
+    "status": "What-If"
+  },
+  {
+    "id": 26,
+    "requirement": [
+      "Technical Electives",
+      "Advanced Composition"
+    ],
+    "subrequirement": [
+      "Design Electives",
+      "Advanced Composition"
+    ],
+    "course_number": "ECE 499",
+    "course_name": "Senior Thesis",
+    "hours": 2,
+    "semester": "Spring 2018",
+    "grade": "N/A",
+    "taken": false,
+    "status": "What-If"
+  },
+  {
+    "id": 27,
+    "requirement": [
+      "Technical Electives"
+    ],
+    "subrequirement": [
+      "Other Technical Electives"
+    ],
+    "course_number": "ECE 402",
+    "course_name": "Electronic Music Synthesis",
+    "hours": 3,
+    "semester": "Spring 2018",
+    "grade": "N/A",
+    "taken": false,
+    "status": "What-If"
+  },
+  {
+    "id": 28,
+    "requirement": [
+      "Technical Electives"
+    ],
+    "subrequirement": [
+      "Other Technical Electives"
+    ],
+    "course_number": "ECE 311",
+    "course_name": "Digital Signal Processing Lab",
+    "hours": 1,
+    "semester": "Spring 2017",
+    "grade": "N/A",
+    "taken": false,
+    "status": "Registered"
+  },
+  {
+    "id": 28,
+    "requirement": [
+      "Technical Electives"
+    ],
+    "subrequirement": [
+      "Other Technical Electives"
+    ],
+    "course_number": "CS 465",
+    "course_name": "User Interface Design",
+    "hours": 3,
+    "semester": "Spring 2018",
+    "grade": "N/A",
+    "taken": false,
+    "status": "What-If"
+  },
+  {
+    "id": 29,
+    "requirement": [
+      "Technical Electives"
+    ],
+    "subrequirement": [
+      "Other Technical Electives"
+    ],
+    "course_number": "SHS 200",
+    "course_name": "General Phonetics",
+    "hours": 3,
+    "semester": "Spring 2018",
+    "grade": "N/A",
+    "taken": false,
+    "status": "What-If"
+  },
+  {
+    "id": 30,
+    "requirement": [
+      "Social Sciences and Humanities",
+      "Cultural Studies"
+    ],
+    "subrequirement": [
+      "Campus Humanaties The Arts",
+      "Western/Comparative"
+    ],
+    "course_number": "HIST 171",
+    "course_name": "US Hist to 1887",
+    "hours": 3,
+    "semester": "Spring 2015",
+    "grade": "A-",
+    "taken": true,
+    "status": "What-If"
+  },
+  {
+    "id": 31,
+    "requirement": [
+      "Social Sciences and Humanities",
+      "Cultural Studies"
+    ],
+    "subrequirement": [
+      "Campus Humanaties The Arts",
+      "Wester/Comparative"
+    ],
+    "course_number": "HIST 172",
+    "course_name": "US Hist Since 1887",
+    "hours": 3,
+    "semester": "Fall 2015",
+    "grade": "B+",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 32,
+    "requirement": [
+      "Social Sciences and Humanities"
+    ],
+    "subrequirement": [
+      "Campus Social and Behavioral Science"
+    ],
+    "course_number": "ECON 102",
+    "course_name": "Microeconomic Principles",
+    "hours": 3,
+    "semester": "Fall 2016",
+    "grade": "N/A",
+    "taken": false,
+    "status": "In-Progress"
+  },
+  {
+    "id": 33,
+    "requirement": [
+      "Social Sciences and Humanities"
+    ],
+    "subrequirement": [
+      "Campus Social and Behavioral Science"
+    ],
+    "course_number": "GWS 100",
+    "course_name": "Intro to Gener & Women's Studies",
+    "hours": 3,
+    "semester": "Fall 2017",
+    "grade": "N/A",
+    "taken": false,
+    "status": "What-If"
+  },
+  {
+    "id": 34,
+    "requirement": [
+      "Social Sciences and Humanities"
+    ],
+    "subrequirement": [
+      "Liberal Education Electives"
+    ],
+    "course_number": "ACCY 200",
+    "course_name": "Fundemantals of Accounting",
+    "hours": 3,
+    "semester": "Fall 2017",
+    "grade": "N/A",
+    "taken": false,
+    "status": "What-If"
+  },
+  {
+    "id": 35,
+    "requirement": [
+      "Social Sciences and Humanities"
+    ],
+    "subrequirement": [
+      "Liberal Education Electives"
+    ],
+    "course_number": "FIN 221",
+    "course_name": "Corporate Finance",
+    "hours": 3,
+    "semester": "Fall 2018",
+    "grade": "N/A",
+    "taken": false,
+    "status": "What-If"
+  },
+  {
+    "id": 36,
+    "requirement": [
+      "Social Sciences and Humanities",
+      "Cultural Studies"
+    ],
+    "subrequirement": [
+      "Non-Western/U.S. Minority"
+    ],
+    "course_number": "MUS 132",
+    "course_name": "Popular Music Studies",
+    "hours": 3,
+    "semester": "Fall 2014",
+    "grade": "A",
+    "taken": true,
+    "status": "Completed"
+  },
+  {
+    "id": 37,
+    "requirement": [
+      "University Foreign Language"
+    ],
+    "subrequirement": [
+      "University Foreign Language"
+    ],
+    "course_number": "FR 103",
+    "course_name": "Intermediate French I",
+    "hours": 4,
+    "semester": "Spring 2017",
+    "grade": "N/A",
+    "taken": false,
+    "status": "Registered"
+  },
+  {
+    "id": 38,
+    "requirement": [
+      "Other Courses"
+    ],
+    "subrequirement": [
+      "Other Courses"
+    ],
+    "course_number": "MUS 181",
+    "course_name": "Voice",
+    "hours": 2,
+    "semester": "Fall 2017",
+    "grade": "N/A",
+    "taken": false,
+    "status": "What-If"
+  },
+  {
+    "id": 38,
+    "requirement": [
+      "Other Courses"
+    ],
+    "subrequirement": [
+      "Other Courses"
+    ],
+    "course_number": "MUS 181",
+    "course_name": "Voice",
+    "hours": 2,
+    "semester": "Spring 2018",
+    "grade": "N/A",
+    "taken": false,
+    "status": "What-If"
+  },
+  {
+    "id": 39,
+    "requirement": [
+      "Other Courses"
+    ],
+    "subrequirement": [
+      "Other Courses"
+    ],
+    "course_number": "MUS 261",
+    "course_name": "Choral Ensemble",
+    "hours": 1,
+    "semester": "Spring 2017",
+    "grade": "N/A",
+    "taken": false,
+    "status": "Registered"
+  },
+  {
+    "id": 40,
+    "requirement": [
+      "Other Courses"
+    ],
+    "subrequirement": [
+      "Other Courses"
+    ],
+    "course_number": "BADM 199",
+    "course_name": "Undergraduate Open Seminar",
+    "hours": 2,
+    "semester": "Spring 2017",
+    "grade": "N/A",
+    "taken": false,
+    "status": "Registered"
+  }
+]
+
