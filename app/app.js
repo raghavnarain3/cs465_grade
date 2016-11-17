@@ -60,7 +60,7 @@ $(function () {
 
 
 app.controller('myFirstController', ['$scope','$http', '$filter' , function($scope, $http, $filter) {
-    $http.get('classes.json').
+    $http.get('./data/classes.json').
     success(function(data){
       $scope.classes = data;
       console.log(data) ;
